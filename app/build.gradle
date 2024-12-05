@@ -1,0 +1,23 @@
+plugins {
+	id 'cpp-application'
+	id 'cpp-unit-test'
+	id 'nokee-samples.object-files'
+}
+
+application {
+}
+
+tasks.withType(AbstractLinkTask).configureEach {
+	doFirst {
+		source.each { println it }
+	}
+}
+
+tasks.register('verify') {
+	dependsOn({ files(tasks.withType(AbstractNativeCompileTask)*.objectFiles) })
+	doLast {
+		tasks.withType(AbstractNativeCompileTask)*.objectFiles*.files.each {
+			println it
+		}
+	}
+}

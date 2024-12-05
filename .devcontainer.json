@@ -1,0 +1,4 @@
+{
+	"image":"gradle:jdk17",
+	"runArgs": ["--platform=linux/amd64" ]
+}

@@ -1,0 +1,6 @@
+pluginManagement {
+	includeBuild 'object-files-plugin'
+}
+
+rootProject.name = 'sample-object-files-mapping'
+include 'app'
