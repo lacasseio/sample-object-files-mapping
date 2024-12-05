@@ -1,0 +1,13 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index 0b73bc6..1f0665c 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -1,7 +1,7 @@
+ plugins {
+ 	id 'cpp-application'
+ 	id 'cpp-unit-test'
+-//	id 'nokee-samples.object-files'
++	id 'nokee-samples.object-files'
+ }
+ 
+ application {
